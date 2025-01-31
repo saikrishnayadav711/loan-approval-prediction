@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <link rel="stylesheet" href="/style/style.css">
+</head>
+<body class="bg-gray-100">
+
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+          
+                <div class="flex-shrink-0 flex items-center">
+                    <img class="h-8 w-8" src="/images/loan.jpg" alt="Logo"> <h1 class="font-medium italic font-sans	cursor-pointer">LOAN APP</h1>
+                </div>
+
+                <div class="hidden md:flex space-x-4 items-center">
+                    <a href="#" class="text-gray-900 hover:text-gray-700 px-3 py-2 rounded-md text-sm font-medium cursor-pointer hover:text-blue-500">Home</a>
+                    <a href="/loan" class="text-gray-900 hover:text-gray-700 px-3 py-2 rounded-md text-sm font-medium cursor-pointer hover:text-blue-500">Predict</a>
+                    <a href="#targetSection1" class="text-gray-900 hover:text-gray-700 px-3 py-2 rounded-md text-sm font-medium cursor-pointer  hover:text-blue-500">Insights</a>
+                    <a href="#Contact" class="text-gray-900 hover:text-gray-700 px-3 py-2 rounded-md text-sm font-medium cursor-pointer hover:text-blue-500">Contact</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-gray-900 hover:text-gray-700 focus:outline-none focus:text-gray-700">
+                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden">
+            <a href="#" class="block text-gray-900 hover:bg-gray-200 px-3 py-2 rounded-md text-base font-medium">Home</a>
+            <a href="#" class="block text-gray-900 hover:bg-gray-200 px-3 py-2 rounded-md text-base font-medium">Predict</a>
+            <a href="#" class="block text-gray-900 hover:bg-gray-200 px-3 py-2 rounded-md text-base font-medium">Insights</a>
+            <a href="" class="block text-gray-900 hover:bg-gray-200 px-3 py-2 rounded-md text-base font-medium">Contact</a>
+        </div>
+    </nav>
+    <div class="h-screen w-screen bg-gray-200" id="bg">
+       
+        <div class="ml-8 text-4xl font-bold text-white " id="full">
+          
+            <span id="typewriter" class="mt-64"></span>
+           
+        </div>
+        <div class="text-left space-y-4">
+            <!-- Predict Loan Button -->
+            <a href="/loan" class="inline-block px-6 py-3 text-white bg-blue-600 rounded-lg font-semibold text-lg shadow-md hover:bg-blue-700 hover:shadow-lg transform hover:-translate-y-1 transition duration-300 ease-in-out">
+                Predict Loan
+            </a>
+    
+            <!-- Get Started Button -->
+            <a href="#" id="scrollButton" class="inline-block px-6 py-3 text-white bg-green-600 rounded-lg font-semibold text-lg shadow-md hover:bg-green-700 hover:shadow-lg transform hover:-translate-y-1 transition duration-300 ease-in-out">
+                Get Started
+            </a>
+        </div>
+      </div>
+      <div class="w-full text-blue-500 py-4">
+        <h1 class="text-center text-3xl font-bold">Loan Approval Prediction Using ML</h1>
+    </div>
+    <div class="w-full h-auto flex bg-gray-100 py-8" id="targetSection">
+        <!-- Left Div with Image -->
+        <div class="w-1/2 flex justify-center items-center">
+            <img src="/images/predict.png" alt="Image Description" class="max-w-full h-auto">
+        </div>
+    
+        <!-- Right Div with Heading and Paragraph -->
+        <div class="w-1/2 p-6">
+            <h2 class="text-2xl font-bold mb-4 text-shadow-orange"> How Our Algorithm Works</h2>
+            <p class="text-lg text-gray-700">
+                <p class="mb-4">1. <strong>Data Collection:</strong> The system gathers applicant details for evaluation.</p>
+                <p class="mb-4">2. <strong>Model Training:</strong> Historical loan data trains various machine learning models to learn approval patterns.</p>
+                <p class="mb-4">3. <strong>Algorithm Selection:</strong> Logistic Regression, among other algorithms, is chosen for its high accuracy in predictions.</p>
+                <p class="mb-4">4. <strong>Prediction:</strong> The trained model assesses new applicant data to predict loan approval or rejection.</p>
+                <p class="mb-4">5. <strong>Visualization:</strong> Results are displayed via a web app using Flask, providing a user-friendly interface for financial institutions.</p>
+            </p>
+        </div>
+    </div>
+    <div class="w-full text-blue-500 py-4">
+        <h1 class="text-center text-3xl font-bold">THIS ORGANIZATION GOAL IS</h1>
+    </div>
+    <div class="w-full h-auto flex bg-gray-100 py-8" id="targetSection">
+       
+    
+        <!-- Right Div with Heading and Paragraph -->
+        <div class="w-1/2 p-6">
+            <h2 class="text-2xl font-bold mb-4 text-shadow-orange"> Key Objectives of Our Organization</h2>
+            <p class="text-lg text-gray-700">
+                <p class="mb-4">1. <strong>Enhance Efficiency:</strong> Automate the loan approval process to improve decision-making speed and accuracy.</p>
+    <p class="mb-4">2. <strong>Improve Accuracy:</strong> Utilize machine learning algorithms to make precise predictions about loan approvals.</p>
+    <p class="mb-4">3. <strong>Reduce Processing Time:</strong> Minimize the time required for loan approval through automated systems.</p>
+    <p class="mb-4">4. <strong>Streamline Operations:</strong> Provide a user-friendly web application for financial institutions to manage and review loan applications.</p>
+    <p class="mb-4">5. <strong>Leverage Data:</strong> Use historical data and advanced analytics to predict loan approval status effectively.</p>
+        </div>
+         <!-- Left Div with Image -->
+         <div class="w-1/2 flex justify-center items-center">
+            <swiper-container class="mySwiper"  pagination-clickable="true" space-between="30"
+            centered-slides="true" autoplay-delay="2000" autoplay-disable-on-interaction="false">
+            <swiper-slide><img src="/images/personal-loan_1631718789151.webp" alt="" srcset=""></swiper-slide>
+            <swiper-slide><img src="/images/loan-e1450497559334.jpg" alt="" srcset=""></swiper-slide>
+            <swiper-slide><img src="/images/cscore.jpg" alt="" srcset=""></swiper-slide>
+            <swiper-slide><img src="/images/Less-Time-Consuming.jpg" alt="" srcset=""></swiper-slide>
+            <swiper-slide><img src="/images/loanhd.jpg" alt="" srcset=""></swiper-slide>
+            <swiper-slide><img src="/images/selected-1-1.webp" alt="" srcset=""></swiper-slide>
+            
+          </swiper-container>
+        
+        </div>
+    </div>
+    
+    <!-- Insights Section -->
+    <div class="bg-white shadow-lg rounded-lg p-8 max-w-4xl mx-auto mb-8 " id="targetSection1">
+        <h2 class="text-2xl font-bold mb-4 text-gray-800">Insights into Loan Approval Prediction Using Machine Learning</h2>
+        <p class="text-gray-700 mb-4">
+            Machine learning has revolutionized the way financial institutions handle loan approvals. By leveraging
+            advanced algorithms, we can enhance the accuracy of predictions and automate the decision-making process.
+        </p>
+        <p class="text-gray-700 mb-4">
+            Key insights include the ability to analyze large datasets with diverse features such as applicant income,
+            credit history, and property area. This enables a more comprehensive evaluation of loan applications.
+        </p>
+        <p class="text-gray-700 mb-4">
+            The use of machine learning models, such as logistic regression and random forest, provides a significant
+            improvement in prediction accuracy compared to traditional methods.
+        </p>
+        <p class="text-gray-700 mb-4">
+            Data visualization tools allow financial institutions to interpret results effectively, leading to more informed
+            decisions and better customer experiences.
+        </p>
+        <p class="text-gray-700">
+            Overall, integrating machine learning into loan approval processes not only speeds up the decision-making
+            but also increases the precision of the predictions, reducing manual errors and improving overall efficiency.
+        </p>
+    </div>
+
+    <!-- Contact Us Form -->
+    <div class="bg-white shadow-lg rounded-lg p-8 max-w-4xl mx-auto" id="Contact">
+        <h2 class="text-2xl font-bold mb-6 text-gray-800">Contact Us</h2>
+        <form id="contactForm">
+            <div class="mb-4">
+                <label for="name" class="block text-gray-700 mb-2">Name</label>
+                <div class="relative">
+                    <input type="text" id="name" name="name" class="form-input mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50" placeholder="Enter your name" required>
+                    <i class="fas fa-user form-icon absolute top-3 right-3"></i>
+                </div>
+            </div>
+            <div class="mb-4">
+                <label for="email" class="block text-gray-700 mb-2">Email</label>
+                <div class="relative">
+                    <input type="email" id="email" name="email" class="form-input mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50" placeholder="Enter your email" required>
+                    <i class="fas fa-envelope form-icon absolute top-3 right-3"></i>
+                </div>
+            </div>
+            <div class="mb-4">
+                <label for="suggestions" class="block text-gray-700 mb-2">Suggestions</label>
+                <textarea id="suggestions" name="suggestions" rows="4" class="form-input mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50" placeholder="Your suggestions" required></textarea>
+                <i class="fas fa-comments form-icon absolute top-3 right-3"></i>
+            </div>
+            <div class="mb-4">
+                <label for="feedback" class="block text-gray-700 mb-2">Feedback</label>
+                <textarea id="feedback" name="feedback" rows="4" class="form-input mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50" placeholder="Your feedback" required></textarea>
+                <i class="fas fa-edit form-icon absolute top-3 right-3"></i>
+            </div>
+            <button type="submit" class="w-full bg-blue-500 text-white py-2 px-4 rounded-md shadow-sm hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
+                Submit
+            </button>
+        </form>
+    </div>
+    <footer class="bg-gray-800 text-white py-6">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+            <!-- About Section -->
+            <div class="mb-4 md:mb-0">
+                <h2 class="text-xl font-bold mb-2">Loan Prediction</h2>
+                <p class="text-gray-400">Automate loan approval with our machine learning model.</p>
+            </div>
+
+            <!-- Social Media Icons -->
+            <div class="flex space-x-4">
+                <a href="#" class="footer-icon">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class="footer-icon">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" class="footer-icon">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="#" class="footer-icon">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+
+            <!-- Contact Section -->
+            <div class="mt-4 md:mt-0">
+                <p class="text-gray-400">© 2024 Loan Prediction, Inc. All rights reserved.</p>
+            </div>
+        </div>
+        
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+      <script src="/js/script.js"></script>
+  
+
+</body>
+</html>
